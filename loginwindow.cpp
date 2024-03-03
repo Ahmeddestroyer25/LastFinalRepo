@@ -16,6 +16,6 @@ LoginWindow::~LoginWindow()
 
 void LoginWindow::on_pushButton_clicked()
 {
-    ui->label->setText("ahmed");
+    ui->UsernameLabel->setText("ahmed");
 }
 
