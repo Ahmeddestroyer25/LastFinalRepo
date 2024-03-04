@@ -50,7 +50,7 @@ void LoginWindow::on_LoginButton_clicked()
     if(found){
         if(flag){
             hide();
-            WelcomeWindow* welcomewindow= new WelcomeWindow(this);
+            WelcomeWindow* welcomewindow= new WelcomeWindow(this,UserEnteredUsername, ages[index]);
 
 
 
