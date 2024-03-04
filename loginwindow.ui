@@ -89,7 +89,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Error: Wrong username or password&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="RegisterButton_2">
+   <widget class="QPushButton" name="LoginButton">
     <property name="geometry">
      <rect>
       <x>30</x>
