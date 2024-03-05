@@ -48,13 +48,13 @@ void RegisterWindow::on_RegisterButton2_clicked()
         return;
     }
 
-    // Check if the entered password is not equal the retyped password
+
     if (UserEnteredRegisterPassword != retypePassword) {
         ui->ErrorMatchingLabel->setVisible(true);
         return;
     }
 
-    // Check if the entered username is already existing in the usernames array
+
     for (int i = 0; i < usersCount; ++i) {
         if (usernames[i] == UserEnteredRegisterUsername) {
             ui->ErrorExistingLabel->setVisible(true);
@@ -62,7 +62,7 @@ void RegisterWindow::on_RegisterButton2_clicked()
         }
     }
 
-    // Add the new user to the global arrays
+
     usernames[usersCount-1] = UserEnteredRegisterUsername;
     passwords[usersCount-1] = UserEnteredRegisterPassword;
     ages[usersCount-1] = RegisterAge;
