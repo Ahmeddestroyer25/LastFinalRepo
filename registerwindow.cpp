@@ -26,7 +26,10 @@ void RegisterWindow::on_RegisterButton2_clicked()
     ui->ErrorCredentialsLabel->setVisible(false);
     ui->ErrorAgeLabel->setVisible(false);
 
-
+    bool matching=false;
+    bool existing=false;
+    bool credentials=false;
+    bool ageError=false;
     QString UserEnteredRegisterUsername = ui->RegisterUsernameLineEdit->text();
     QString UserEnteredRegisterPassword = ui->RegisterPasswordLineEdit->text();
     QString retypePassword = ui->RetypeRegisterPasswordLineEdit->text();
@@ -34,8 +37,7 @@ void RegisterWindow::on_RegisterButton2_clicked()
 
 
     if ((UserEnteredRegisterUsername.isEmpty()) or (UserEnteredRegisterPassword.isEmpty()) or (retypePassword.isEmpty()) or (UserEnteredYear.isEmpty())) {
-        ui->ErrorCredentialsLabel->setVisible(true);
-        return;
+        credentials=true;
     }
 
 
@@ -44,22 +46,34 @@ void RegisterWindow::on_RegisterButton2_clicked()
 
 
     if (RegisterAge < 12) {
-        ui->ErrorAgeLabel->setVisible(true);
-        return;
+        ageError=true;
     }
 
 
     if (UserEnteredRegisterPassword != retypePassword) {
-        ui->ErrorMatchingLabel->setVisible(true);
-        return;
+        matching=true;
     }
 
 
     for (int i = 0; i < usersCount; ++i) {
         if (usernames[i] == UserEnteredRegisterUsername) {
-            ui->ErrorExistingLabel->setVisible(true);
-            return;
+            existing=true;
+
         }
+    }
+    if((matching)||(existing)||(credentials)||(ageError)){
+        if(matching)
+            ui->ErrorMatchingLabel->setVisible(true);
+
+        if(existing)
+            ui->ErrorExistingLabel->setVisible(true);
+        if(credentials){
+            ui->ErrorCredentialsLabel->setVisible(true);
+        }
+        if(ageError){
+            ui->ErrorAgeLabel->setVisible(true);
+        }
+        return;
     }
 
 
