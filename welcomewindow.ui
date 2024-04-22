@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,42 +16,45 @@
   <widget class="QLabel" name="HelloLabel">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>20</y>
      <width>131</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="ImageLabel">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>60</y>
-     <width>451</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Label</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#ff0000;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="LogoutButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>250</y>
+     <x>40</x>
+     <y>220</y>
      <width>80</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Logout</string>
    </property>
   </widget>
+  <widget class="QLabel" name="ImageLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <zorder>ImageLabel</zorder>
+  <zorder>HelloLabel</zorder>
+  <zorder>LogoutButton</zorder>
  </widget>
  <resources/>
  <connections/>
